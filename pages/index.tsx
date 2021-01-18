@@ -1,6 +1,8 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
-import Table from '../components/Table';
+
+const Table = dynamic(() => import('../components/Table'));
 
 const Home = () => {
 
@@ -14,8 +16,6 @@ const Home = () => {
       <main className={styles.main}>
         <div>
           <Table />
-          {/* <img
-            src='/imgs/cat.gif' /> */}
         </div>
       </main>
 
